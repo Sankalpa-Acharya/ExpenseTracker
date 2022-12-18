@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.384);
+  height: 40px;
+}
+body{
+
+  background-color: rgb(237, 233, 233);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  overflow-x: hidden;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.balance{
+  margin-top: 1.7rem;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance > p{
+  margin-bottom: .4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance > span{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.incomeexpense{
+  padding: .89rem 0;
+  display: flex;
+}
+
+.incomeexpense > div{
+  padding: 1.8rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: rgb(249, 247, 247);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.incomeexpense > div:first-child{
+  margin-right: 2rem;
+
+}
+
+
+.incomeexpense p{
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.incomeexpense .income{
+  color: rgb(18, 212, 18);
+}
+.incomeexpense .expense{
+  color: rgb(212, 18, 18);
+}
+
+
+.history{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(247, 245, 245);
+  margin-top: 1.1rem;
+  padding:.7rem 1.1rem;
+  border-radius: 2px;
+  align-items: center;
+}
+
+.history .cash{
+  color: rgb(67, 65, 65);
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.newtransaction{
+  margin-top: 1.3rem;
+}
+
+
+.addtext{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 1.3rem;
+}
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  height: 2rem;
+  font-size: 16px;
+  padding: .4rem;
+  margin-top: .6rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+input:focus{
+  border: 1px solid #dfdfe4;
+
+}
+
+.addamount{
+  display: flex;
+  margin-top: 1.3rem;
+  flex-direction: column;
+}
+
+.addamount p{
+ font-size: 14px;
+ margin-top: .2rem;
+}
+
+
+.btn{
+  padding: .4rem 0;
+  /* background-color:#e74c3c; */
+  background-color:  #8871fd;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 1.3rem;
+  cursor: pointer;
+  transition: .2s;
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  background-color:  rgb(115, 89, 250);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.plus{
+  border-right: 5px solid rgb(15, 209, 106);
+}
+.minus{
+  border-right: 5px solid red;
+
+}
+
+
+.historycontainer{
+  height: 8rem;
+  overflow: auto;
+  padding-right:.5rem;
 }
